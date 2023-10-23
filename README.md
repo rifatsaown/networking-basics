@@ -96,3 +96,7 @@ sudo systemctl restart nginx
 ```
 <img src="./img/nginxindexpage.png" />
 
+### 12. Display the same index.html file in "your_name.com" by utilizing hostname of vm and host machine
+```bash
+# TODO : join  and learn how to do it
+```
