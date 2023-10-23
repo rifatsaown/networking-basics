@@ -76,3 +76,11 @@ sudo systemctl restart nginx
 # open browser and type ip address of the vm in the browser of host machine and access the page
 
 # 12.
+# open host machine terminal and edit hosts file
+#ex: Linux
+sudo nano /etc/hosts
+#ex: Windows 
+notepad C:\windows\system32\drivers\etc\hosts
+# add ip address of vm and hostname of vm
+ip-address-of-vm hostname-of-vm
+# open browser and type hostname-of-vm in the browser of host machine and access the page

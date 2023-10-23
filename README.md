@@ -99,11 +99,12 @@ sudo systemctl restart nginx
 ### 12. Display the same index.html file in "your_name.com" by utilizing hostname of vm and host machine
 ```bash
 # open host machine terminal and add ip-address-of-vm and your_name.com in /etc/hosts file
+#ex : Linux
 sudo nano /etc/hosts
+#ex : Windows (run as administrator in powershell) 
+notepad C:\windows\system32\drivers\etc\hosts
 # add ip-address-of-vm and your_name.com in /etc/hosts file
 192.168.0.103 your_name.com
 # save and exit
 # access your_name.com from web browser
-
-# TODO: Not Clear - join support session and ask
 ```
