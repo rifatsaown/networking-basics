@@ -63,3 +63,35 @@ sudo apt install nginx
 <!-- show img -->
 <img src="./img/nginxwelcomepage.png" />
 
+### 10. Create a mysql database server in vm and access it from host machine
+```bash
+sudo apt update
+sudo apt install mysql-server
+sudo systemctl status mysql
+# open mysql in terminal with root user
+sudo mysql
+# create user and grant permission
+CREATE USER 'username'@'ip-can-access/%-for-all' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'ip-can-access/%-for-all' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+# exit from mysql
+exit
+# open host machine terminal and access mysql
+mysql -u username -h ip-address-of-vm -P 3306 -p
+# enter password and access mysql
+```
+<img src="./img/mysql.png" />
+
+### 11. replace default nginx page with an index.html page containing your name and access it from web browser
+```bash
+# create index.html file
+sudo nano /var/www/html/index.html
+# add your name in index.html file
+# save and exit
+# remove default nginx page
+sudo rm /var/www/html/index.nginx-debian.html
+# restart nginx server
+sudo systemctl restart nginx
+```
+<img src="./img/nginxindexpage.png" />
+
