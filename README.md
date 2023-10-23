@@ -92,6 +92,7 @@ sudo nano /var/www/html/index.html
 sudo rm /var/www/html/index.nginx-debian.html
 # restart nginx server
 sudo systemctl restart nginx
+# access index.html page from web browser with ip-address-of-vm 
 ```
 <img src="./img/nginxindexpage.png" />
 
